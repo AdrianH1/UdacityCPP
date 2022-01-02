@@ -72,9 +72,81 @@ void quizSwitch()
 	std::cout << in1 << operation << in2 << "=" << result;
 }
 
+void quizForLoop()
+{
+	float sum = 0, avg = 0;
+	for (int i = 0; i < 5; i++)
+	{
+		int tmp = 0;
+		std::cin >> tmp;
+		sum += tmp;
+	}
+	avg = sum / 5;
+	std::cout << "Summe: " << sum;
+	std::cout << "Average: " << avg;
+}
+
+void quizWhileLoop()
+{
+	//use 55 as the number to be guessed
+	int target = 55;
+	int guess = -1;
+	while (guess != target)
+	{
+		std::cout << "Guess a number between 0 and 100: ";
+		std::cin >> guess;
+		std::cout << guess << "\n";
+		if (guess > target)
+			std::cout << "Your guess is too high\n";
+		else if (guess < target)
+			std::cout << "Your guess is too low\n";
+		else
+			std::cout << "You guessed the target!\n";
+
+		//Note I had to use double quotes around "q"
+		//because it is a string
+		if (guess == -1)
+		{
+			std::cout << "good bye!";
+			break;
+		}
+	}
+
+}
+
+void exitingLoops()
+{
+	int a = 0;
+	while (a < 5)
+	{
+		std::cout << "a = " << a << "\n";
+		a++;
+		if (a == 3)
+			break;
+	}
+	std::cout << "The first statement after the first while loop\n\n";
+
+
+	while (a < 15)
+	{
+		a++;
+		if (a == 10)
+		{
+			std::cout << "\tWhen a=10, go back to the top of the loop";
+			std::cout << "\n\tThis means a=10 is skipped.\n";
+			continue;
+		}
+		std::cout << "After continue a = " << a << "\n";
+	}
+}
+
 int main()
 {
 	//quizIfElse();
-	quizSwitch();
+	//quizSwitch();
+	//quizForLoop();
+	//quizWhileLoop();
+	exitingLoops();
+
 	return 0;
 }
