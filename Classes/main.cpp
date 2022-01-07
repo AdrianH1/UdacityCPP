@@ -29,27 +29,40 @@ int main()
 	//cout << "\n";
 	//cat2.printInfo();
 
-	Gameboard game1;
-	game1.setGameSpace(0, 0, 'x');
-	game1.setGameSpace(0, 1, 'x');
-	game1.setGameSpace(0, 2, 'x');
-	game1.setGameSpace(0, 3, 'y');
-	game1.setGameSpace(1, 0, 'x');
-	game1.setGameSpace(2, 0, 'x');
-	game1.setGameSpace(3, 0, 'x');
-	game1.setGameSpace(3, 1, 'x');
-	game1.setGameSpace(3, 2, 'x');
-	game1.setGameSpace(3, 3, 'x');
+	//Gameboard game1;
+	//game1.setGameSpace(0, 0, 'x');
+	//game1.setGameSpace(0, 1, 'x');
+	//game1.setGameSpace(0, 2, 'x');
+	//game1.setGameSpace(0, 3, 'y');
+	//game1.setGameSpace(1, 0, 'x');
+	//game1.setGameSpace(2, 0, 'x');
+	//game1.setGameSpace(3, 0, 'x');
+	//game1.setGameSpace(3, 1, 'x');
+	//game1.setGameSpace(3, 2, 'x');
+	//game1.setGameSpace(3, 3, 'x');
 
-	if (game1.fourInRow() == 1)
-	{
-		cout << "X got four in a row! \n\n";
-	}
-	else
-	{
-		cout << "X did not get four in a row :(\n\n";
-	}
-	game1.printInfo();
+	//if (game1.fourInRow() == 1)
+	//{
+	//	cout << "X got four in a row! \n\n";
+	//}
+	//else
+	//{
+	//	cout << "X did not get four in a row :(\n\n";
+	//}
+	//game1.printInfo();
+
+	const int SIZE = 3;
+
+	Dog roster[SIZE];
+
+	roster[0].setName("Max");
+	roster[0].setLicenseNumber(123);
+	roster[1].setName("Xiro");
+	roster[1].setLicenseNumber(456);
+	roster[2].setName("Buddy");
+	roster[2].setLicenseNumber(789);
+
+	printRoster(roster, SIZE);
 
 	return 0;
 }
