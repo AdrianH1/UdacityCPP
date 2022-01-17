@@ -42,6 +42,7 @@ int main()
 
     //The address of the data - use pointers
     std::cout << "address integer = " << &givenInt << "\n";
+    std::cout << "address integer = " << pointerGivenInt << "\n";
     std::cout << "address float = " << &givenFloat << "\n";
     std::cout << "address double = " << &givenDouble << "\n";
     std::cout << "address string = " << &givenString << "\n";
@@ -50,6 +51,7 @@ int main()
     //Use indirection to the get the value stored at the address
     std::cout << "pointer of givenInt = " << *pointerGivenInt << "\n";
     std::cout << "pointer of pointer of givenInt = " << **pointerPointerGivenInt << "\n";
+    std::cout << "pointer of pointer of givenInt = " << pointerPointerGivenInt << "\n";
 
     return 0;
 }
